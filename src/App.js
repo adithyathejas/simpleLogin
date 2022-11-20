@@ -9,17 +9,18 @@ function App() {
   
 
   useEffect(()=>{
-
     const loginLocalStorageInf= localStorage.getItem('isLoggedIn')
-    if(loginLocalStorageInf===1){
+    console.log(loginLocalStorageInf)
+    if(loginLocalStorageInf==='1'){
       setIsLoggedIn(true) 
+      console.log("run")
     }
   },[])
 
   const loginHandler = (email, password) => {
     // We should of course check email and password
     // But it's just a dummy/ demo anyways
-    localStorage.setItem('isLoggedin',1)
+    localStorage.setItem('isLoggedIn',1)
     setIsLoggedIn(true);
   };
 
