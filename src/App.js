@@ -13,8 +13,8 @@ function App() {
     console.log(loginLocalStorageInf)
     if(loginLocalStorageInf==='1'){
       setIsLoggedIn(true) 
-      console.log("run")
     }
+
   },[])
 
   const loginHandler = (email, password) => {
@@ -25,6 +25,7 @@ function App() {
   };
 
   const logoutHandler = () => {
+    localStorage.setItem('isLoggedIn',0)
     setIsLoggedIn(false);
   };
 
